@@ -69,7 +69,8 @@ public class FlightSearchTest {
 
 			// Verify the Search Results Page
 			boolean isDisplayed = wait
-					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("Flights from Hyderabad to Chennai")))
+					.until(ExpectedConditions
+							.visibilityOfElementLocated(By.xpath("//*[text()='Flights from Hyderabad to Chennai']")))
 					.isDisplayed();
 			Assert.assertTrue(isDisplayed, "Search Results page is not displayed");
 		} catch (Exception e) {
